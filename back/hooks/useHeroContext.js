@@ -1,12 +1,12 @@
-// import { HeroContext } from "../context/heroContext";
-// import { useContext } from "react";
+import { HeroContext } from "../context/heroContext";
+import { useContext } from "react";
 
-// export const useHeroContext = () => {
-//   const context = useContext(HeroContext);
+export const useHeroContext = () => {
+  const context = useContext(HeroContext);
 
-//   if (!context) {
-//     throw Error("Context used outside of context provider");
-//   }
+  if (!context) {
+    throw Error("Context used outside of context provider");
+  }
 
-//   return context;
-// };
+  return context;
+};
