@@ -11,10 +11,10 @@ const HeroGallery = () => {
       className={`${s.heroes_gallery_container} row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gx-5 gy-4`}
     >
       {heroes &&
-        heroes.map(({ nickname, images }) => {
+        heroes.map(({ nickname, images }, index) => {
           return (
-            <div key={nickname} className="col">
-              <HeroCard nickname={nickname} imageUrl={images[0]} />
+            <div key={index} className="col">
+              <HeroCard id={index} nickname={nickname} imageUrl={images[0]} />
             </div>
           );
         })}

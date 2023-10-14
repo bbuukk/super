@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
 import s from "./heroCard.module.scss";
 
-const HeroCard = ({ nickname, imageUrl }) => {
+const HeroCard = ({ id, nickname, imageUrl }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    const nicknamePath = nickname.replace(/\s/g, "");
-    router.push(`/${nicknamePath}`);
+    router.push(`/${id}`);
   };
 
   return (
