@@ -1,0 +1,30 @@
+@use "/styles//mixins" as *;
+
+.navbar {
+  display: flex;
+  height: 5rem;
+  background-color: magenta;
+  align-items: center;
+  justify-self: center;
+  gap: 4rem;
+
+  .logo {
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    img {
+      height: 50%;
+      object-fit: contain;
+    }
+  }
+
+  .links_container {
+    display: flex;
+    gap: 1rem;
+
+    .link {
+      @include link(1.5rem, white);
+    }
+  }
+}
