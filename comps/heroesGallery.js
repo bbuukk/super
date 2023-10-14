@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import HeroCard from "./heroCard";
 import s from "./heroesGallery.module.scss";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { useHeroContext } from "@/back/hooks/useHeroContext";
 
 const HeroGallery = () => {
-  const [heroes, setHeroes] = useState([]);
+  const { heroes, dispatch } = useHeroContext();
 
   useEffect(() => {
     const fetchHeroes = async () => {
@@ -12,7 +12,7 @@ const HeroGallery = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setHeroes(data);
+        dispatch({ type: "SET_HEROES", payload: data });
       }
     };
     fetchHeroes();
