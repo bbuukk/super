@@ -2,10 +2,15 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 
-// Component to display hero details
-const HeroDetails = ({ hero }) => (
+const HeroDetails = ({ hero, editMode, toggleEditMode }) => (
   <div>
-    <h1>{hero.nickname}</h1>
+    <div className="d-flex align-center justify-content-between">
+      <h1>{hero.nickname}</h1>
+      <button className="btn b" onClick={toggleEditMode}>
+        <i class="bi bi-pencil-square"></i>
+        Edit
+      </button>
+    </div>
     <p>Real Name: {hero.real_name}</p>
     <p>Origin Description: {hero.origin_description}</p>
     <ul>
@@ -37,12 +42,19 @@ const Hero = () => {
 
   const heroIdNumber = Number(heroId);
 
+  const [editMode, setEditMode] = useState(false);
+
   return (
     <>
-      {Number.isInteger(heroIdNumber) &&
+      {heroes &&
+      Number.isInteger(heroIdNumber) &&
       heroIdNumber >= 0 &&
       heroIdNumber < heroes.length ? (
-        <HeroDetails hero={hero} />
+        <HeroDetails
+          hero={hero}
+          editMode={editMode}
+          toggleEditMode={() => setEditMode(!editMode)}
+        />
       ) : (
         <p>"Invalid hero ID"</p>
       )}
