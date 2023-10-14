@@ -3,14 +3,14 @@
 .navbar {
   display: flex;
   height: 5rem;
-  background-color: magenta;
+  //   background-color: magenta;
   align-items: center;
   justify-self: center;
   gap: 4rem;
 
   .logo {
     height: 100%;
-    background-color: aqua;
+    // background-color: aqua;
     display: flex;
     align-items: center;
     img {
@@ -24,7 +24,7 @@
     gap: 1rem;
 
     .link {
-      @include link(1.5rem, white);
+      @include link(1.5rem, black);
     }
   }
 }

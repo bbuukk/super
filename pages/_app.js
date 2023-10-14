@@ -15,7 +15,9 @@ export default function App({ Component, pageProps }) {
       </Head>
       <HeroContextProvider>
         <div className="container">
-          <Navbar />
+          <div className="mb-5">
+            <Navbar />
+          </div>
           <ContextComponent>
             <Component {...pageProps} />;
           </ContextComponent>
