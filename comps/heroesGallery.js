@@ -4,19 +4,7 @@ import s from "./heroesGallery.module.scss";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 
 const HeroGallery = () => {
-  const { heroes, dispatch } = useHeroContext();
-
-  useEffect(() => {
-    const fetchHeroes = async () => {
-      const response = await fetch("http://localhost:4000/heroes");
-      const data = await response.json();
-
-      if (response.ok) {
-        dispatch({ type: "SET_HEROES", payload: data });
-      }
-    };
-    fetchHeroes();
-  }, []);
+  const { heroes } = useHeroContext();
 
   return (
     <div
