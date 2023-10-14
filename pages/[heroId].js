@@ -16,22 +16,30 @@ const Hero = () => {
   }, [heroes, heroId]);
 
   return (
-    <div>
-      <h1>{hero.nickname}</h1>
-      <p>Real Name: {hero.real_name}</p>
-      <p>Origin Description: {hero.origin_description}</p>
-      <ul>
-        {hero.superpowers &&
-          hero.superpowers.map((power, index) => <li key={index}>{power}</li>)}
-      </ul>
-      <p>Catch Phrase: {hero.catch_phrase}</p>
-      <div>
-        {hero.images &&
-          hero.images.map((image, index) => (
-            <img key={index} src={image} alt={`${hero.nickname} image`} />
-          ))}
-      </div>
-    </div>
+    <>
+      {typeof heroId === "number" && heroId >= 0 && heroId <= heroes.length ? (
+        <div>
+          <h1>{hero.nickname}</h1>
+          <p>Real Name: {hero.real_name}</p>
+          <p>Origin Description: {hero.origin_description}</p>
+          <ul>
+            {hero.superpowers &&
+              hero.superpowers.map((power, index) => (
+                <li key={index}>{power}</li>
+              ))}
+          </ul>
+          <p>Catch Phrase: {hero.catch_phrase}</p>
+          <div>
+            {hero.images &&
+              hero.images.map((image, index) => (
+                <img key={index} src={image} alt={`${hero.nickname} image`} />
+              ))}
+          </div>
+        </div>
+      ) : (
+        <p>"Invalid hero ID"</p>
+      )}
+    </>
   );
 };
 
