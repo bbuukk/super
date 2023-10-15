@@ -1,0 +1,41 @@
+@use "@/styles/variables" as *;
+
+.disposable_image {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+
+  .dispose_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    margin: 5%;
+
+    background-color: $color-platinum;
+    color: black;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-deeep-carmine-pink;
+      color: white;
+    }
+  }
+
+  .image_container {
+    height: 100%;
+
+    img {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+}
