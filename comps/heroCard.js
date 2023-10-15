@@ -5,7 +5,7 @@ const HeroCard = ({ id, nickname, imageUrl }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/${id}`);
+    router.push(`/hero/${id}`);
   };
 
   return (

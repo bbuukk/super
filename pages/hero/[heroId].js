@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 import EditHeroModal from "@/comps/editHeroModal";
 
-const HeroDetails = ({ hero, editMode, toggleEditMode }) => (
+const HeroDetails = ({ hero, toggleEditMode }) => (
   <div>
     <div className="d-flex align-center justify-content-between">
       <h1>{hero.nickname}</h1>
@@ -31,43 +31,31 @@ const HeroDetails = ({ hero, editMode, toggleEditMode }) => (
 const Hero = () => {
   const router = useRouter();
   const { heroId } = router.query;
+
   const { heroes } = useHeroContext();
-
-  // const [hero, setHero] = useState({});
-
-  // useEffect(() => {
-  //   if (heroes) {
-  //     setHero(heroes[heroId]);
-  //   }
-  // }, [heroes]);
-
-  const heroIdNumber = Number(heroId);
-
   const [editMode, setEditMode] = useState(false);
+  const heroIdNumber = Number(heroId);
 
   return (
     <>
       {heroes &&
-      Number.isInteger(heroIdNumber) &&
-      heroIdNumber >= 0 &&
-      heroIdNumber < heroes.length ? (
-        <>
-          <HeroDetails
-            hero={heroes[heroId]}
-            editMode={editMode}
-            toggleEditMode={() => setEditMode(!editMode)}
-          />
-          <EditHeroModal
-            isOpen={editMode}
-            toggle={() => {
-              setEditMode(!editMode);
-            }}
-            hero={heroes[heroId]}
-          />
-        </>
-      ) : (
-        <p>"Invalid hero ID"</p>
-      )}
+        Number.isInteger(heroIdNumber) &&
+        heroIdNumber >= 0 &&
+        heroIdNumber < heroes.length && (
+          <>
+            <HeroDetails
+              hero={heroes[heroId]}
+              toggleEditMode={() => setEditMode(!editMode)}
+            />
+            <EditHeroModal
+              isOpen={editMode}
+              toggle={() => {
+                setEditMode(!editMode);
+              }}
+              hero={heroes[heroId]}
+            />
+          </>
+        )}
     </>
   );
 };

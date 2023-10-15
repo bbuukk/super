@@ -1,5 +1,6 @@
 import Link from "next/link";
 import s from "./navbar.module.scss";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   return (
