@@ -62,8 +62,13 @@ const updateHero = async (req, res) => {
     return res.status(result.status).json({ error: result.error });
   }
 
-  await Hero.updateOne({ _id: id }, { ...req.body });
-  res.status(200).json(result.hero);
+  const updatedHero = await Hero.findOneAndUpdate(
+    { _id: id },
+    { ...req.body },
+    { new: true }
+  );
+
+  res.status(200).json(updatedHero);
 };
 
 const deleteHero = async (req, res) => {
