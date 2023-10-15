@@ -33,13 +33,13 @@ const Hero = () => {
   const { heroId } = router.query;
   const { heroes } = useHeroContext();
 
-  const [hero, setHero] = useState({});
+  // const [hero, setHero] = useState({});
 
-  useEffect(() => {
-    if (heroes) {
-      setHero(heroes[heroId]);
-    }
-  }, [heroes]);
+  // useEffect(() => {
+  //   if (heroes) {
+  //     setHero(heroes[heroId]);
+  //   }
+  // }, [heroes]);
 
   const heroIdNumber = Number(heroId);
 
@@ -53,7 +53,7 @@ const Hero = () => {
       heroIdNumber < heroes.length ? (
         <>
           <HeroDetails
-            hero={hero}
+            hero={heroes[heroId]}
             editMode={editMode}
             toggleEditMode={() => setEditMode(!editMode)}
           />
@@ -62,7 +62,7 @@ const Hero = () => {
             toggle={() => {
               setEditMode(!editMode);
             }}
-            hero={hero}
+            hero={heroes[heroId]}
           />
         </>
       ) : (
