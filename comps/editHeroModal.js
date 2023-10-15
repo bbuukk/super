@@ -3,6 +3,7 @@ import { Modal } from "react-bootstrap";
 import s from "./editHeroModal.module.scss";
 import InputField from "./mutual/auxiliary/inputField";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
+import DisposableImage from "./mutual/auxiliary/disposableImage";
 
 const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const { dispatch } = useHeroContext();
@@ -12,6 +13,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const [originDescription, setOriginDescription] = useState("");
   const [superpowers, setSuperpowers] = useState("");
   const [catchPhrase, setCatchPhrase] = useState("");
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     setNickname(hero.nickname);
@@ -19,6 +21,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
     setOriginDescription(hero.origin_description);
     setSuperpowers(hero.superpowers);
     setCatchPhrase(hero.catch_phrase);
+    setImages(hero.images);
   }, [hero]);
 
   const handleSubmit = async (e) => {
@@ -31,6 +34,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
       origin_description: originDescription,
       superpowers,
       catch_phrase: catchPhrase,
+      images,
     };
 
     if (updatedHero != hero) {
@@ -55,6 +59,11 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
       console.log("No changes were made");
     }
     toggle();
+  };
+
+  const dispose = (key) => {
+    const updatedImages = images.filter((image, index) => index != key);
+    setImages(updatedImages);
   };
 
   return (
@@ -90,6 +99,21 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
                 value={catchPhrase}
                 setValue={setCatchPhrase}
               />
+            </div>
+
+            <div
+              className={`${s.images} row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gx-0`}
+            >
+              {images.map((image, index) => (
+                <div key={index} className={`${s.image_container} col `}>
+                  <DisposableImage
+                    imageUrl={image}
+                    dispose={() => dispose(index)}
+                    width={10}
+                    height={10}
+                  />
+                </div>
+              ))}
             </div>
 
             <div className={`${s.button_area}`}>
