@@ -5,6 +5,8 @@ import InputField from "./mutual/auxiliary/inputField";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 import DisposableImage from "./mutual/auxiliary/disposableImage";
 
+//! there is a bug, when you change state of nickname, but doesn't submit it, and then open modal again, the nickname will be the same as in the state, not as in the props
+
 const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const { dispatch } = useHeroContext();
 
@@ -38,27 +40,22 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
       images,
     };
 
-    if (updatedHero != hero) {
-      try {
-        const response = await fetch(
-          `http://localhost:4000/heroes/${hero._id}`,
-          {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(updatedHero),
-          }
-        );
+    try {
+      const response = await fetch(`http://localhost:4000/heroes/${hero._id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedHero),
+      });
 
-        if (!response.ok) throw new Error("Network response was not ok");
+      if (!response.ok) throw new Error("Network response was not ok");
 
-        const data = await response.json();
-        dispatch({ type: "UPDATE_HERO", payload: data });
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    } else {
-      console.log("No changes were made");
+      const data = await response.json();
+      console.log(data);
+      dispatch({ type: "UPDATE_HERO", payload: data });
+    } catch (error) {
+      console.error("Error:", error);
     }
+
     toggle();
   };
 
@@ -117,7 +114,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
                   }}
                   className={`${s.btn} btn`}
                 >
-                  <i class="bi bi-plus-lg"></i>
+                  <i className="bi bi-plus-lg"></i>
                 </button>
               </div>
 
