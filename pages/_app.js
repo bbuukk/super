@@ -2,6 +2,7 @@ import "@/styles/globals.scss";
 import Head from "next/head";
 import Navbar from "@/comps/mutual/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { HeroContextProvider } from "../back/context/heroContext";
 import { useHeroContext } from "../back/hooks/useHeroContext";
 import { useEffect } from "react";
