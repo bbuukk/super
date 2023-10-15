@@ -13,13 +13,6 @@ export const heroReducer = (state, action) => {
         heroes: [action.payload, ...state.heroes],
       };
     case "UPDATE_HERO":
-      // console.log("updating hero");
-      // console.log("payload");
-      // console.log(action.payload);
-      // console.log("heroes");
-      // console.log(state.heroes);
-      // console.log("id");
-      // console.log(action.payload._id);
       return {
         heroes: state.heroes.map((hero) => {
           if (hero._id === action.payload._id) {
