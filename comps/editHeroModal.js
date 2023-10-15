@@ -1,20 +1,61 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "react-bootstrap";
 import s from "./editHeroModal.module.scss";
+import InputField from "./mutual/auxiliary/inputField";
+import { useHeroContext } from "@/back/hooks/useHeroContext";
 
 const EditHeroModal = ({ isOpen, toggle, hero }) => {
-  const [nickname, setNickname] = useState(hero.nickname);
-  const [realName, setRealName] = useState(hero.real_name);
-  const [originDescription, setOriginDescription] = useState(
-    hero.origin_description
-  );
-  const [superpowers, setSuperpowers] = useState(hero.superpowers);
-  const [catchPhrase, setCatchPhrase] = useState(hero.catch_phrase);
+  const { dispatch } = useHeroContext();
+
+  const [nickname, setNickname] = useState("");
+  const [realName, setRealName] = useState("");
+  const [originDescription, setOriginDescription] = useState("");
+  const [superpowers, setSuperpowers] = useState("");
+  const [catchPhrase, setCatchPhrase] = useState("");
+
+  useEffect(() => {
+    setNickname(hero.nickname);
+    setRealName(hero.real_name);
+    setOriginDescription(hero.origin_description);
+    setSuperpowers(hero.superpowers);
+    setCatchPhrase(hero.catch_phrase);
+  }, [hero]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle the submission of the form
-    // toggle();
+
+    const updatedHero = {
+      ...hero,
+      nickname,
+      real_name: realName,
+      origin_description: originDescription,
+      superpowers,
+      catch_phrase: catchPhrase,
+    };
+
+    if (updatedHero != hero) {
+      try {
+        const response = await fetch(
+          `http://localhost:4000/heroes/${hero._id}`,
+          {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(updatedHero),
+          }
+        );
+
+        if (!response.ok) throw new Error("Network response was not ok");
+
+        const data = await response.json();
+        dispatch({ type: "UPDATE_HERO", payload: data });
+        console.log(data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    } else {
+      console.log("No changes were made");
+    }
+    toggle();
   };
 
   return (
@@ -25,61 +66,31 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
           <hr />
           <form onSubmit={handleSubmit}>
             <div className={`${s.input_fields}`}>
-              <div>
-                <label htmlFor="nickname">Nickname</label>
-                <input
-                  id="nickname"
-                  className={`form-control fs-5 `}
-                  value={nickname}
-                  onChange={(e) => {
-                    setNickname(e.target.value);
-                  }}
-                />
-              </div>
-              <div>
-                <label htmlFor="realName">Real Name</label>
-                <input
-                  id="realName"
-                  className={`form-control fs-5 `}
-                  value={realName}
-                  onChange={(e) => {
-                    setRealName(e.target.value);
-                  }}
-                />
-              </div>
-              <div>
-                <label htmlFor="originDescription">Origin Description</label>
-                <input
-                  id="originDescription"
-                  className={`form-control fs-5 `}
-                  value={originDescription}
-                  onChange={(e) => {
-                    setOriginDescription(e.target.value);
-                  }}
-                />
-              </div>
-              <div>
-                <label htmlFor="superpowers">Superpowers</label>
-                <input
-                  id="superpowers"
-                  className={`form-control fs-5 `}
-                  value={superpowers}
-                  onChange={(e) => {
-                    setSuperpowers(e.target.value.split(","));
-                  }}
-                />
-              </div>
-              <div>
-                <label htmlFor="catchPhrase">Catch Phrase</label>
-                <input
-                  id="catchPhrase"
-                  className={`form-control fs-5 `}
-                  value={catchPhrase}
-                  onChange={(e) => {
-                    setCatchPhrase(e.target.value);
-                  }}
-                />
-              </div>
+              <InputField
+                id="nickname"
+                value={nickname}
+                setValue={setNickname}
+              />
+              <InputField
+                id="realName"
+                value={realName}
+                setValue={setRealName}
+              />
+              <InputField
+                id="originDescription"
+                value={originDescription}
+                setValue={setOriginDescription}
+              />
+              <InputField
+                id="superpowers"
+                value={superpowers}
+                setValue={(e) => setSuperpowers(e.target.value.split(","))}
+              />
+              <InputField
+                id="catchPhrase"
+                value={catchPhrase}
+                setValue={setCatchPhrase}
+              />
             </div>
 
             <div className={`${s.button_area}`}>
