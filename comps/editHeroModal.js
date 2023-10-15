@@ -14,6 +14,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const [superpowers, setSuperpowers] = useState("");
   const [catchPhrase, setCatchPhrase] = useState("");
   const [images, setImages] = useState([]);
+  const [newImage, setNewImage] = useState("");
 
   useEffect(() => {
     setNickname(hero.nickname);
@@ -101,19 +102,39 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
               />
             </div>
 
-            <div
-              className={`${s.images} row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gx-0`}
-            >
-              {images.map((image, index) => (
-                <div key={index} className={`${s.image_container} col `}>
-                  <DisposableImage
-                    imageUrl={image}
-                    dispose={() => dispose(index)}
-                    width={10}
-                    height={10}
-                  />
-                </div>
-              ))}
+            <div className={`${s.images}`}>
+              <div className={`${s.add_new_image_section}`}>
+                <InputField
+                  id="newImage"
+                  value={newImage}
+                  setValue={setNewImage}
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setImages([...images, newImage]);
+                    setNewImage("");
+                  }}
+                  className={`${s.btn} btn`}
+                >
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+
+              <div
+                className={` row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gx-0`}
+              >
+                {images.map((image, index) => (
+                  <div key={index} className={`${s.image_container} col `}>
+                    <DisposableImage
+                      imageUrl={image}
+                      dispose={() => dispose(index)}
+                      width={10}
+                      height={10}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className={`${s.button_area}`}>

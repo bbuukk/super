@@ -3,6 +3,7 @@ import s from "./navbar.module.scss";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
   return (
     <>
       <div className={`${s.navbar}`}>

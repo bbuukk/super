@@ -1,3 +1,5 @@
+@use "@/styles/variables" as *;
+
 .images {
   padding: 2rem;
   margin: 1rem;
@@ -6,4 +8,15 @@
 
 .button_area {
   margin-top: 3rem;
+}
+
+.add_new_image_section {
+  display: flex;
+  align-items: center;
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-platinum;
+  }
 }
