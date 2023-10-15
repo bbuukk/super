@@ -48,15 +48,12 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
 
         const data = await response.json();
         dispatch({ type: "UPDATE_HERO", payload: data });
-        console.log("modal");
-        console.log(data);
       } catch (error) {
         console.error("Error:", error);
       }
     } else {
       console.log("No changes were made");
     }
-    console.log("toggle");
     toggle();
   };
 

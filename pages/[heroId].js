@@ -39,7 +39,7 @@ const Hero = () => {
     if (heroes) {
       setHero(heroes[heroId]);
     }
-  }, [heroes, heroId]);
+  }, [heroes]);
 
   const heroIdNumber = Number(heroId);
 
