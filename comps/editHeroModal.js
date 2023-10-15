@@ -3,9 +3,9 @@ import { Modal } from "react-bootstrap";
 import s from "./editHeroModal.module.scss";
 import InputField from "./mutual/auxiliary/inputField";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
-import DisposableImage from "./mutual/auxiliary/disposableImage";
+import Disposable from "./mutual/auxiliary/disposable";
 
-//! there is a bug, when you change state of nickname, but doesn't submit it, and then open modal again, the nickname will be the same as in the state, not as in the props
+//! todo there is a bug, when you change state of nickname, but doesn't submit it, and then open modal again, the nickname will be the same as in the state, not as in the props
 
 const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const { dispatch } = useHeroContext();
@@ -123,12 +123,15 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
               >
                 {images.map((image, index) => (
                   <div key={index} className={`${s.image_container} col `}>
-                    <DisposableImage
-                      imageUrl={image}
+                    <Disposable
                       dispose={() => dispose(index)}
                       width={10}
                       height={10}
-                    />
+                    >
+                      <div className={`${s.image}`}>
+                        <img src={image} alt="hero image" />
+                      </div>
+                    </Disposable>
                   </div>
                 ))}
               </div>

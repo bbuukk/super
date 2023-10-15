@@ -26,7 +26,7 @@ export const heroReducer = (state, action) => {
       };
     case "DELETE_HERO":
       return {
-        heroes: state.heroes.filter((hero) => hero.id !== action.payload),
+        heroes: state.heroes.filter((hero) => hero._id !== action.payload._id),
       };
     default:
       return state;

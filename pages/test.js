@@ -1,4 +1,4 @@
-import DisposableImage from "@/comps/mutual/auxiliary/disposableImage";
+import DisposableImage from "@/comps/mutual/auxiliary/disposable";
 
 const Test = () => {
   return (
