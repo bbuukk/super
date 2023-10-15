@@ -1,2 +1,12 @@
+@use "@/styles/mixins" as *;
+
 .heroes_gallery_container {
+  .add_new_hero_card {
+    width: 10em;
+    height: 10em;
+    @include card;
+    font-size: 5em;
+    align-items: center;
+    justify-items: center;
+  }
 }

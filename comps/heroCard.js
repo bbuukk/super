@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import s from "./heroCard.module.scss";
 import Disposable from "./mutual/auxiliary/disposable";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
+import EditHeroModal from "./editHeroModal";
 
 const HeroCard = ({ id, hero: { _id, nickname, images } }) => {
   const router = useRouter();
@@ -34,7 +35,11 @@ const HeroCard = ({ id, hero: { _id, nickname, images } }) => {
           onClick={() => handleClick()}
           className={`${s.hero_card}`}
         >
-          <img src={images[0]} alt={nickname} className={`${s.image}`} />
+          <img
+            src={images && images[0]}
+            alt="hero image"
+            className={`${s.image}`}
+          />
           <p className={`${s.nickname}`}>{nickname}</p>
         </div>
       </Disposable>

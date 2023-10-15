@@ -15,22 +15,24 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const [originDescription, setOriginDescription] = useState("");
   const [superpowers, setSuperpowers] = useState("");
   const [catchPhrase, setCatchPhrase] = useState("");
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState([""]);
   const [newImage, setNewImage] = useState("");
 
   useEffect(() => {
-    setNickname(hero.nickname);
-    setRealName(hero.real_name);
-    setOriginDescription(hero.origin_description);
-    setSuperpowers(hero.superpowers);
-    setCatchPhrase(hero.catch_phrase);
-    setImages(hero.images);
+    if (Object.keys(hero).length) {
+      setNickname(hero.nickname);
+      setRealName(hero.real_name);
+      setOriginDescription(hero.origin_description);
+      setSuperpowers(hero.superpowers);
+      setCatchPhrase(hero.catch_phrase);
+      setImages(hero.images);
+    }
   }, [hero]);
 
-  const handleSubmit = async (e) => {
+  const handleSumbit = (e) => {
     e.preventDefault();
 
-    const updatedHero = {
+    const newHero = {
       ...hero,
       nickname,
       real_name: realName,
@@ -40,23 +42,42 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
       images,
     };
 
-    try {
-      const response = await fetch(`http://localhost:4000/heroes/${hero._id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedHero),
-      });
-
-      if (!response.ok) throw new Error("Network response was not ok");
-
-      const data = await response.json();
-      console.log(data);
-      dispatch({ type: "UPDATE_HERO", payload: data });
-    } catch (error) {
-      console.error("Error:", error);
+    //check if hero object is empty, if so we create new one, if not updating
+    if (Object.keys(hero).length) {
+      updateHero(newHero);
+    } else {
+      createHero(newHero);
     }
 
     toggle();
+  };
+
+  const updateHero = async (updatedHero) => {
+    const response = await fetch(`http://localhost:4000/heroes/${hero._id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedHero),
+    });
+
+    const data = await response.json();
+    if (!response.ok) throw new Error("Network response was not ok");
+    dispatch({ type: "UPDATE_HERO", payload: data });
+  };
+
+  const createHero = async (newHero) => {
+    console.log("creating new hero");
+    console.log(newHero);
+    const response = await fetch(`http://localhost:4000/heroes`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newHero),
+    });
+
+    console.log(response);
+
+    const data = await response.json();
+    if (!response.ok) throw new Error("Network response was not ok");
+    dispatch({ type: "CREATE_HERO", payload: data });
   };
 
   const dispose = (key) => {
@@ -70,7 +91,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
         <Modal.Body>
           <p>Edit Superhero</p>
           <hr />
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSumbit}>
             <div className={`${s.input_fields}`}>
               <InputField
                 id="nickname"
@@ -89,8 +110,10 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
               />
               <InputField
                 id="superpowers"
+                // value={superpowers.join(",")}
                 value={superpowers}
-                setValue={(e) => setSuperpowers(e.target.value.split(","))}
+                // setValue={(e) => setSuperpowers(e.target.value.split(","))}
+                setValue={setSuperpowers}
               />
               <InputField
                 id="catchPhrase"
@@ -109,7 +132,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
                 <button
                   type="button"
                   onClick={() => {
-                    setImages([...images, newImage]);
+                    setImages([...(images || []), newImage]);
                     setNewImage("");
                   }}
                   className={`${s.btn} btn`}
@@ -121,19 +144,20 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
               <div
                 className={` row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gx-0`}
               >
-                {images.map((image, index) => (
-                  <div key={index} className={`${s.image_container} col `}>
-                    <Disposable
-                      dispose={() => dispose(index)}
-                      width={10}
-                      height={10}
-                    >
-                      <div className={`${s.image}`}>
-                        <img src={image} alt="hero image" />
-                      </div>
-                    </Disposable>
-                  </div>
-                ))}
+                {images &&
+                  images.map((image, index) => (
+                    <div key={index} className={`${s.image_container} col `}>
+                      <Disposable
+                        dispose={() => dispose(index)}
+                        width={10}
+                        height={10}
+                      >
+                        <div className={`${s.image}`}>
+                          <img src={image} alt="hero image" />
+                        </div>
+                      </Disposable>
+                    </div>
+                  ))}
               </div>
             </div>
 
