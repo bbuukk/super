@@ -6,8 +6,11 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { HeroContextProvider } from "../back/context/heroContext";
 import { useHeroContext } from "../back/hooks/useHeroContext";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  const excludedPaths = ["/404"];
   return (
     <>
       <Head>
@@ -16,9 +19,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       <HeroContextProvider>
         <div className="container">
-          <div className="mb-5">
-            <Navbar />
-          </div>
+          {!excludedPaths.includes(router.pathname) && (
+            <div className="mb-5">
+              <Navbar />
+            </div>
+          )}
           <ContextComponent>
             <Component {...pageProps} />
           </ContextComponent>
