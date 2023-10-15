@@ -20,9 +20,10 @@
     background-color: $color-platinum;
     color: black;
     border-radius: 50%;
-    width: 10%;
-    height: 10%;
+    width: 1em;
+    height: 1em;
     cursor: pointer;
+    font-size: 2em;
 
     &:hover {
       background-color: $color-deeep-carmine-pink;
