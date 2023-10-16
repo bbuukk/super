@@ -57,7 +57,7 @@ coming soon...
 ## 🔷 Design
 
 Design made in [Figma](figma.com/)<br>
-Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/Untitled?type=design&node-id=0%3A1&mode=design&t=vG68AFPiZEOFanje-1) to design file of the project 
+Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/super?type=design&t=E9zTlADF5z5cRY01-6) to design file of the project 
 
 ## 🔷 How to Run the Project
 
