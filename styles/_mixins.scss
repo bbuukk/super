@@ -1,7 +1,18 @@
+@use "@/styles/variables" as *;
+
 @mixin link($font-size, $color) {
   font-size: $font-size;
   color: $color;
   text-decoration: none;
+
+  color: #ff0;
+  text-shadow: 0px 4px 4px rgba(233, 192, 192, 0.25);
+  font-family: $font-family-irish-grover;
+  font-size: 40px;
+
+  font-weight: 400;
+  line-height: normal;
+  -webkit-text-stroke: 0.1rem $color-red;
 
   background: linear-gradient(
       to right,
@@ -25,29 +36,110 @@
 }
 
 @mixin card() {
-  $color-purple: #9769b1;
-  $color-black: #3e4440;
-  $color-old-paper: #e7dfcb;
-  $color-red: #ff0000;
-  $color-yellow: #ffff00;
+  $radius: 0.2rem;
+  $padding: 0.5rem;
+  .milk_border {
+    // padding: 1em;
+    background-color: $color-old-paper;
 
-  width: 18rem;
-  height: 22rem;
+    transition: transform 0.3s;
+    border-radius: 0.2rem;
+    border: 0.4em solid $color-black; // First border
 
-  border: 5px solid $color-old-paper; // First border
-  box-shadow: 0 0 0 5px $color-black; // Second border
+    &:hover {
+      transform: scale(1.1, 1.1);
+      z-index: 99;
+    }
+    padding: $padding;
 
-  transition: transform 0.3s, box-shadow 0.2s 0.1s;
-  display: flex;
-  flex-direction: column;
+    width: 18rem;
+    cursor: pointer;
+    height: 22rem;
+    overflow: hidden;
 
-  padding: 1rem;
-  cursor: pointer;
-  border-radius: 0.2rem;
+    .hero_card {
+      background-color: $color-red;
+      display: flex;
+      flex-direction: column;
 
-  &:hover {
-    transform: scale(1.1, 1.1);
-    z-index: 99;
-    box-shadow: 0 0 6px 1px grey;
+      padding: $padding;
+      padding-top: $padding * 2;
+
+      border-radius: $radius;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      .image {
+        border: 0.5rem solid white;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+      .nickname {
+        @include text(1.3rem);
+      }
+
+      .card_category {
+        background-color: $color-purple;
+        position: absolute;
+        right: 0;
+        top: -0.3rem;
+        z-index: 1;
+        height: 10rem;
+        width: fit-content;
+        padding: 0 1rem;
+
+        @include text(0.8rem);
+      }
+
+      .brand_logo {
+        position: absolute;
+        z-index: 3;
+        top: 1rem;
+        left: 1rem;
+        // display: none;
+      }
+
+      .lines_bottom {
+        position: absolute;
+        bottom: 0;
+        left: 5rem;
+        transform: rotate(-45deg);
+      }
+
+      .lines_top {
+        position: absolute;
+        top: 0;
+        right: 5rem;
+        transform: rotate(-45deg);
+      }
+
+      .lines_top,
+      .lines_bottom {
+        overflow: hidden;
+        width: 100%;
+
+        .line {
+          // width: 100rem;
+          // width: 100%;
+          height: 0.2em;
+          background-color: white;
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
   }
+}
+
+@mixin text($font-size) {
+  font-size: $font-size;
+  color: #fff;
+  font-family: $font-family-jomruhia;
+  font-weight: bold;
+  text-transform: uppercase;
 }

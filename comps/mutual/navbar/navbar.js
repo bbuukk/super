@@ -17,10 +17,10 @@ const Navbar = () => {
         </div>
         <div className={`${s.links_container}`}>
           <Link href="/" className={`${s.link}`}>
-            Heroes
+            HEROES
           </Link>
           <Link href="/about" className={`${s.link}`}>
-            About
+            ABOUT
           </Link>
         </div>
       </div>
