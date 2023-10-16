@@ -3,13 +3,16 @@ import { useRouter } from "next/router";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 import EditHeroModal from "@/comps/editHeroModal";
 
-const HeroDetails = ({ hero, toggleEditMode }) => (
+const HeroDetails = ({ hero, toggleEditMode, deleteHero }) => (
   <div>
-    <div className="d-flex align-center justify-content-between">
+    <div className="d-flex align-center ">
       <h1>{hero.nickname}</h1>
-      <button className="btn b" onClick={toggleEditMode}>
+      <button className="btn " onClick={toggleEditMode}>
         <i className="bi bi-pencil-square"></i>
         Edit
+      </button>
+      <button className="btn " onClick={deleteHero}>
+        <i class="bi bi-trash-fill"></i> Delete
       </button>
     </div>
     <p>Real Name: {hero.real_name}</p>
@@ -31,10 +34,29 @@ const HeroDetails = ({ hero, toggleEditMode }) => (
 const Hero = () => {
   const router = useRouter();
   const { heroId } = router.query;
+  const { dispatch } = useHeroContext();
 
   const { heroes } = useHeroContext();
   const [editMode, setEditMode] = useState(false);
   const heroIdNumber = Number(heroId);
+
+  const deleteHero = () => {
+    const fetchDelete = async () => {
+      const response = await fetch(
+        `http://localhost:4000/heroes/${heroes[heroId]._id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      const data = await response.json();
+
+      if (response.ok) {
+        dispatch({ type: "DELETE_HERO", payload: data });
+        router.push("/");
+      }
+    };
+    fetchDelete();
+  };
 
   return (
     <>
@@ -46,6 +68,7 @@ const Hero = () => {
             <HeroDetails
               hero={heroes[heroId]}
               toggleEditMode={() => setEditMode(!editMode)}
+              deleteHero={() => deleteHero()}
             />
             <EditHeroModal
               isOpen={editMode}

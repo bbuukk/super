@@ -18,10 +18,11 @@
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 400ms;
+  transition: background-size 400ms, color 200ms;
 
   &:hover {
     background-size: 0 2px, 100% 3px;
+    color: $color-red;
   }
 }
 
