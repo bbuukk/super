@@ -1,6 +1,6 @@
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 import HeroCard from "@/comps/heroCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { v4 as uuidv4 } from "uuid";
 import s from "./heroCarousel.module.scss";
@@ -8,9 +8,20 @@ import s from "./heroCarousel.module.scss";
 function HeroCarousel() {
   const { heroes } = useHeroContext();
   const [index, setIndex] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const lastActiveIndex =
+        parseInt(localStorage.getItem("lastActiveIndex")) || 0;
+      setIndex(lastActiveIndex);
+      setIsClient(true);
+    }
+  }, []);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
+    localStorage.setItem("lastActiveIndex", selectedIndex);
   };
 
   function chunkArray(array, chunkSize) {
@@ -25,7 +36,7 @@ function HeroCarousel() {
 
   return (
     <>
-      {heroes && (
+      {isClient && heroes && (
         <div className={`${s.hero_carousel}`}>
           <Carousel
             activeIndex={index}
