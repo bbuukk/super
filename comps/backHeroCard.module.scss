@@ -1,0 +1,49 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.back_hero_card {
+  display: flex;
+  flex-direction: column;
+  $radius: 0.2rem;
+  $padding: 0rem;
+  @include hero_card_container(28rem, 32rem, $radius, $padding);
+  min-height: auto;
+
+  .header {
+    background-color: $color-red;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem;
+    margin-top: 1rem;
+
+    position: relative;
+
+    p {
+      @include text(1rem);
+      margin: 0;
+    }
+  }
+
+  .body {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+
+    .real_name,
+    .origin_description,
+    .superpowers,
+    .catch_phrase {
+      width: 100%;
+      height: fit-content;
+      background-color: $color-old-paper-light;
+    }
+  }
+}

@@ -31,18 +31,10 @@
   $padding: 0.5rem;
 
   .milk_border {
-    background-color: $color-old-paper;
-    padding: $padding;
-
-    width: 18rem;
-    cursor: pointer;
-    height: 22rem;
-    overflow: hidden;
-
-    border-radius: 0.2rem;
-    border: 0.4em solid $color-black; // First border
+    @include hero_card_container(18rem, 22rem, $radius, $padding);
 
     transition: transform 0.3s;
+
     &:hover {
       transform: scale(1.1, 1.1);
       z-index: 99;
@@ -133,4 +125,20 @@
   font-family: $font-family-jomruhia;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@mixin hero_card_container($width, $height, $radius, $padding) {
+  $radius: $radius;
+  $padding: $padding;
+
+  background-color: $color-old-paper;
+  padding: $padding;
+
+  width: $width;
+  cursor: pointer;
+  height: $height;
+  overflow: hidden;
+
+  border-radius: 0.2rem;
+  border: 0.4em solid $color-black; // First border
 }
