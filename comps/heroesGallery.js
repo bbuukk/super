@@ -13,7 +13,7 @@ const HeroGallery = () => {
     <div className={`${s.heroes_gallery_container}`}>
       <HeroCarousel />
 
-      <div className="">
+      {/* <div className="">
         <button
           className={`${s.add_new_hero_card} col`}
           onClick={() => {
@@ -29,7 +29,7 @@ const HeroGallery = () => {
           setEditMode(!editMode);
         }}
         hero={{}}
-      />
+      /> */}
     </div>
   );
 };

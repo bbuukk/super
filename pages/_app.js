@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
         <title>Super</title>
       </Head>
       <HeroContextProvider>
-        <div className="container">
+        <div className="">
           {!excludedPaths.includes(router.pathname) && (
             <div className="mb-5">
               <Navbar />

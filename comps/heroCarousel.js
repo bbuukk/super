@@ -3,6 +3,7 @@ import HeroCard from "@/comps/heroCard";
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { v4 as uuidv4 } from "uuid";
+import s from "./heroCarousel.module.scss";
 
 function HeroCarousel() {
   const { heroes } = useHeroContext();
@@ -25,22 +26,29 @@ function HeroCarousel() {
   return (
     <>
       {heroes && (
-        <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-          {chunkArray(heroes, 5).map((heroesChunk, chunkIndex) => (
-            <Carousel.Item key={chunkIndex}>
-              <div className="row row-cols-md-5 g-3">
-                {heroesChunk.map((hero, index) => {
-                  hero.clientId = hero.clientId || uuidv4();
-                  return (
-                    <div key={hero.clientId} className="col">
-                      <HeroCard id={index} hero={hero} />
-                    </div>
-                  );
-                })}
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+        <div className={`${s.hero_carousel}`}>
+          <Carousel
+            activeIndex={index}
+            controls
+            onSelect={handleSelect}
+            interval={null}
+          >
+            {chunkArray(heroes, 5).map((heroesChunk, chunkIndex) => (
+              <Carousel.Item key={chunkIndex}>
+                <div className={`row row-cols-md-5 ${s.carousel_item}`}>
+                  {heroesChunk.map((hero, index) => {
+                    hero.clientId = hero.clientId || uuidv4();
+                    return (
+                      <div key={hero.clientId} className={`${s.item} col`}>
+                        <HeroCard id={index} hero={hero} />
+                      </div>
+                    );
+                  })}
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
       )}
     </>
   );
