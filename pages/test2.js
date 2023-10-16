@@ -1,32 +1,56 @@
-import Carousel from "../../mutual/auxiliary/carousel";
+import { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+// import ExampleCarouselImage from "components/ExampleCarouselImage";
 
-import s from "./review-carousel.module.scss";
+function ControlledCarousel() {
+  const [index, setIndex] = useState(0);
 
-//todo carousel prev and next buttons do not work, sliding does not work either
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
-const CarouselReviews = () => {
   return (
-    <div className={`${s.review_carousel} `}>
-      <div className={`${s.header} `}>
-        <p>Відгуки</p>
-      </div>
-      <div className={`${s.body} content`}>
-        <Carousel>
-          <div className="carousel-inner container my-5 w-100">
-            <div className="carousel-item active">
-              <div className="  row row-cols-md-3 g-3 "></div>
-            </div>
-            <div className="carousel-item ">
-              <div className="  row row-cols-md-3 g-3"></div>
-            </div>
-            <div className="carousel-item">
-              <div className="  row row-cols-md-3 g-3"></div>
-            </div>
-          </div>
-        </Carousel>
-      </div>
-    </div>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="First slide" /> */}
+        <img
+          src="https://media.npr.org/assets/img/2015/03/03/overly_custom-39399d2cf8b6395770e3f10fd45b22ce39df70d4-s1100-c50.jpg"
+          className="d-block w-100"
+          alt="..."
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="Second slide" /> */}
+        <img
+          src="https://media.sproutsocial.com/uploads/meme-example.jpg"
+          className="d-block w-100"
+          alt="..."
+        />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="Third slide" /> */}
+        <img
+          src="https://imageio.forbes.com/specials-images/imageserve/5e740f3207adf00006db9d14/Coronavirus-meme-featuring-Kanye-West--created-by-meme-account--MasiPopal/960x0.png?format=png&width=960"
+          className="d-block w-100"
+          alt="..."
+        />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
-};
+}
 
-export default CarouselReviews;
+export default ControlledCarousel;
