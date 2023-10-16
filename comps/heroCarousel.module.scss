@@ -2,12 +2,14 @@
   :global {
     .carousel {
       display: flex;
-      padding: 5rem;
+      padding: 0 8rem;
       position: relative;
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
         background-image: url("/general/favicon.ico"); // Set your own prev icon
       }
+
+      // padding: 0 2rem;
 
       .carousel-control-prev,
       .carousel-control-next {

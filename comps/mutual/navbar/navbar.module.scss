@@ -1,20 +1,22 @@
 @use "/styles//mixins" as *;
+@use "/styles//variables" as *;
 
 .navbar {
   display: flex;
   height: 5rem;
-  //   background-color: magenta;
   align-items: center;
   justify-self: center;
+  background-color: $color-old-paper;
   gap: 4rem;
+  padding: 0 2rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 2px -2px gray;
 
   .logo {
-    height: 100%;
-    // background-color: aqua;
-    display: flex;
-    align-items: center;
+    height: 80%;
+
     img {
-      height: 50%;
+      height: 100%;
       object-fit: contain;
     }
   }
