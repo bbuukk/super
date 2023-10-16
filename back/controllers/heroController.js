@@ -19,7 +19,9 @@ const getHero = async (req, res) => {
 };
 
 const createHero = async (req, res) => {
+  console.log("hero");
   const {
+    _id,
     nickname,
     real_name,
     origin_description,
@@ -28,15 +30,23 @@ const createHero = async (req, res) => {
     images,
   } = req.body;
 
+  const heroData = {
+    nickname,
+    real_name,
+    origin_description,
+    superpowers,
+    catch_phrase,
+    images,
+  };
+
+  console.log("_id");
+  console.log(_id);
+  if (_id) {
+    heroData._id = _id;
+  }
+
   try {
-    const hero = await Hero.create({
-      nickname,
-      real_name,
-      origin_description,
-      superpowers,
-      catch_phrase,
-      images,
-    });
+    const hero = await Hero.create(heroData);
     res.status(200).json(hero);
   } catch (err) {
     res.status(400).json({ error: err.message });
@@ -44,6 +54,7 @@ const createHero = async (req, res) => {
 };
 
 const createHeroes = async (req, res) => {
+  console.log("heroes");
   const heroes = req.body;
 
   try {
@@ -84,13 +95,14 @@ const deleteHero = async (req, res) => {
   res.status(200).json(result.hero);
 };
 
-const deleteHeroes = async (req, res) => {
-  const result = await Hero.deleteMany();
-  if (result.error) {
-    return res.status(result.status).json({ error: result.error });
-  }
-  res.status(200);
-};
+// // deleting all heroes
+// const deleteHeroes = async (req, res) => {
+//   const result = await Hero.deleteMany();
+//   if (result.error) {
+//     return res.status(result.status).json({ error: result.error });
+//   }
+//   res.status(200);
+// };
 
 const getHeroById = async (id) => {
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -111,7 +123,7 @@ module.exports = {
   createHeroes,
   updateHero,
   deleteHero,
-  deleteHeroes,
+  // deleteHeroes,
   getHero,
   getHeroes,
 };

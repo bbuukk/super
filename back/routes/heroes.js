@@ -6,7 +6,7 @@ const {
   createHeroes,
   updateHero,
   deleteHero,
-  deleteHeroes,
+  // deleteHeroes,
   getHero,
   getHeroes,
 } = require("../controllers/heroController");
@@ -17,6 +17,6 @@ router.post("/", createHero);
 router.post("/many", createHeroes);
 router.patch("/:id", updateHero);
 router.delete("/:id", deleteHero);
-router.delete("/", deleteHeroes);
+// router.delete("/", deleteHeroes);
 
 module.exports = router;
