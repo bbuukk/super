@@ -1,16 +1,32 @@
-import "@/styles/globals.scss";
+import "/styles/globals.scss";
 import Head from "next/head";
 import Navbar from "@/comps/mutual/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import { HeroContextProvider } from "../back/context/heroContext";
 import { useHeroContext } from "../back/hooks/useHeroContext";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
+// import dynamic from "next/dynamic";
+
+// const DynamicComponentWithNoSSR = dynamic(
+//   () => import("bootstrap/dist/js/bootstrap.bundle.min"),
+//   { ssr: false }
+// );
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const excludedPaths = ["/404"];
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      import("bootstrap/dist/js/bootstrap.bundle.min");
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -25,6 +41,7 @@ export default function App({ Component, pageProps }) {
             </div>
           )}
           <ContextComponent>
+            {/* <DynamicComponentWithNoSSR /> */}
             <Component {...pageProps} />
           </ContextComponent>
         </div>
@@ -50,3 +67,10 @@ function ContextComponent({ children }) {
   1;
   return children;
 }
+
+// ! todo import "bootstrap/dist/js/bootstrap.bundle.min";
+
+// gives me
+
+// Could not find a declaration file for module 'bootstrap/dist/js/bootstrap.bundle.min'. '/home/bb/dev/js/mexa/supher/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' implicitly has an 'any' type.
+//   If the 'bootstrap' package actually exposes this module, consider sending a pull request to amend 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/bootstrap'ts(7016)

@@ -9,29 +9,6 @@ const HeroGallery = () => {
   const { heroes } = useHeroContext();
   const [editMode, setEditMode] = useState(false);
 
-  // const handleAddhero = () => {
-  //   const addHero = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:4000/heroes/${hero._id}`,
-  //         {
-  //           method: "POST",
-  //           headers: { "Content-Type": "application/json" },
-  //           body: JSON.stringify(newHero),
-  //         }
-  //       );
-
-  //       if (!response.ok) throw new Error("Network response was not ok");
-
-  //       const data = await response.json();
-  //       console.log(data);
-  //       dispatch({ type: "CREATE_HERO", payload: data });
-  //     } catch (error) {
-  //       console.error("Error:", error);
-  //     }
-  //   };
-  // };
-
   return (
     <div
       className={`${s.heroes_gallery_container} row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gx-5 gy-4`}
