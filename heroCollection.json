@@ -1,0 +1,395 @@
+[
+  {
+    "_id": "652cc5b4525baf32f2ed43d2",
+    "nickname": "Rocket Raccoonish",
+    "real_name": "Rocket",
+    "origin_description": "Rocket Raccoon is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Bill Mantlo and artist Keith Giffen, the character first appeared in Marvel Preview #7 (Summer 1976). He is an intelligent, anthropomorphic raccoon, who is an expert marksman, weapon specialist and master tactician.",
+    "superpowers": ["master tactician", "marksman", "weapon specialist"],
+    "catch_phrase": "",
+    "images": [
+      "https://i.cbc.ca/1.4100013.1493928423!/fileImage/httpImage/rocket-raccoon-garbage.jpg",
+      "https://i.pinimg.com/originals/a0/a8/67/a0a867ab2b90c9d51b8fa52fff0cad5c.jpg"
+    ],
+    "createdAt": "2023-10-16T07:17:02.647Z",
+    "updatedAt": "2023-10-16T07:17:02.647Z",
+    "__v": 0
+  },
+  {
+    "_id": "652cc73e525baf32f2ed43f1",
+    "nickname": "Rocket Raccoon",
+    "real_name": "Rocket",
+    "origin_description": "Rocket Raccoon is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Bill Mantlo and artist Keith Giffen, the character first appeared in Marvel Preview #7 (Summer 1976). He is an intelligent, anthropomorphic raccoon, who is an expert marksman, weapon specialist and master tactician.",
+    "superpowers": ["master tactician", "marksman", "weapon specialist"],
+    "catch_phrase": "",
+    "images": [
+      "https://i.cbc.ca/1.4100013.1493928423!/fileImage/httpImage/rocket-raccoon-garbage.jpg",
+      "https://i.pinimg.com/originals/a0/a8/67/a0a867ab2b90c9d51b8fa52fff0cad5c.jpg"
+    ],
+    "createdAt": "2023-10-16T05:16:46.301Z",
+    "updatedAt": "2023-10-16T05:16:46.301Z",
+    "__v": 0
+  },
+  {
+    "_id": "652a6c0c161297324e089336",
+    "nickname": "Groot",
+    "real_name": "Groot",
+    "origin_description": "Groot is a fictional character appearing in American comic books published by Marvel Comics. Created by Stan Lee, Larry Lieber and Jack Kirby, the character first appeared in Tales to Astonish #13 (November 1960). An extraterrestrial, sentient tree-like creature, the original Groot first appeared as an invader that intended to capture humans for experimentation.",
+    "superpowers": [
+      "superhuman strength,durability,elasticity,plant manipulation,immortality"
+    ],
+    "catch_phrase": "I am Groot.",
+    "images": [
+      "https://i.redd.it/44gn6c87tt671.png",
+      "https://i.ytimg.com/vi/KSxG05300Nc/maxresdefault.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:23:08.305Z",
+    "updatedAt": "2023-10-15T18:40:29.532Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb694",
+    "nickname": "Star-Lord",
+    "real_name": "Peter Quill",
+    "origin_description": "Peter Quill is Star-Lord, the brash adventurer who, to save the universe from its greatest threats, joins forces with a quartet of disparate misfits - fan-favorite Rocket Raccoon, a tree-like humanoid named Groot, the enigmatic, expert fighter Gamora and the rough-edged warrior Drax the Destroyer.",
+    "superpowers": [
+      "expert hand-to-hand combatant",
+      "master strategist and problem solver",
+      "universal knowledge"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://i.pinimg.com/550x/40/d2/53/40d2538e2437d1721a55805dc2e790fb.jpg",
+      "https://media.tenor.com/lBZGgxlpxoMAAAAd/middle-finger-chris-pratt.gif"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.017Z",
+    "updatedAt": "2023-10-15T10:36:35.341Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb695",
+    "nickname": "Gamora",
+    "real_name": "Gamora Zen Whoberi Ben Titan",
+    "origin_description": "Gamora is a former Zehoberei assassin and a former member of the Guardians of the Galaxy. She became the adopted daughter of Thanos and adopted sister of Nebula after he killed half of her race.",
+    "superpowers": [
+      "superhuman strength and agility",
+      "expert hand-to-hand combatant"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://uberhumor.com/wp-content/uploads/2017/05/p7fy25whv6vy.jpg",
+      "https://pbs.twimg.com/media/Dj8b_oXU4AEcyuk.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.017Z",
+    "updatedAt": "2023-10-14T10:16:22.017Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb696",
+    "nickname": "Drax the Destroyer",
+    "real_name": "Drax",
+    "origin_description": "Drax, also known as Drax the Destroyer, is a former intergalactic criminal and a member of the Guardians of the Galaxy. He sought revenge on Ronan the Accuser for killing his wife and daughter, and went on a rampage across the galaxy, ending with him being imprisoned by the Nova Corps in the Kyln.",
+    "superpowers": [
+      "superhuman strength",
+      "resistance to physical injury",
+      "expert in knives"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://i.kym-cdn.com/photos/images/newsfeed/001/196/776/34b.png",
+      "https://static1.srcdn.com/wordpress/wp-content/uploads/2018/07/Drax-Laughing.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.017Z",
+    "updatedAt": "2023-10-15T10:39:01.198Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb689",
+    "nickname": "Iron Man",
+    "real_name": "Tony Stark",
+    "origin_description": "Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an advanced suit of armor to save his own life and escape captivity. Now with a new outlook on life, Tony uses his money and intelligence to make the world a safer, better place as Iron Man.",
+    "superpowers": [
+      "super strength",
+      "durability",
+      "flight",
+      "repulsor blasts"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://images.unsplash.com/photo-1650610276333-cb64e6724519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80",
+      "https://images.unsplash.com/photo-1635863138275-d9b33299680b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb68a",
+    "nickname": "Captain America",
+    "real_name": "Steve Rogers",
+    "origin_description": "Vowing to serve his country any way he could, young Steve Rogers took the super soldier serum to become America's one-man army. Fighting for the red, white and blue for over 60 years, Captain America is the living, breathing symbol of freedom and liberty.",
+    "superpowers": ["agility,strength,speed,enduran"],
+    "catch_phrase": "",
+    "images": [
+      "https://cdn.mos.cms.futurecdn.net/Xftq5969nTwTpW4DrFXEC4.jpg",
+      "https://m.media-amazon.com/images/I/61IEnMcgAkL.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-15T18:48:50.876Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb68b",
+    "nickname": "Thor",
+    "real_name": "Thor Odinson",
+    "origin_description": "The Norse god of thunder, Thor, is the son of Odin and the giantess Fjorgyn. He wields the mighty hammer Mjolnir and is a founding member of the Avengers.",
+    "superpowers": [
+      "superhuman strength",
+      "durability",
+      "longevity",
+      "weather manipulation"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://images.unsplash.com/photo-1626209731723-4bf514fcdcd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "https://images.unsplash.com/photo-1564598522417-e9ac1425d7c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-15T09:46:04.150Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb68c",
+    "nickname": "Hulk",
+    "real_name": "Bruce Banner",
+    "origin_description": "After being caught in a gamma bomb explosion during the testing of an experimental bomb he invented, Dr. Robert Bruce Banner is transformed into the Hulk when subjected to stress or extreme sunlight.",
+    "superpowers": [
+      "superhuman strength",
+      "regeneration",
+      "longevity",
+      "durability"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://images.unsplash.com/photo-1608272841063-67f50df421c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1605137305211-70d22270c1bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb68d",
+    "nickname": "Black Widow",
+    "real_name": "Natasha Romanoff",
+    "origin_description": "Natasha Romanoff, also known as Black Widow, was one of the most talented spies and assassins in the entire world and a founding member of the Avengers.",
+    "superpowers": [
+      "expert tactician",
+      "martial artist",
+      "markswoman",
+      "pilot"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://m.media-amazon.com/images/I/512FIEAZ7nL.jpg",
+      "https://i.redd.it/ublf42q6qpw51.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb68e",
+    "nickname": "Wolverine",
+    "real_name": "Logan",
+    "origin_description": "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
+    "superpowers": [
+      "regeneration",
+      "super strength",
+      "animal-keen senses",
+      "retractable claws"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://i.pinimg.com/736x/99/93/f3/9993f31d242b9f02290d3f8a82426a66.jpg",
+      "https://i.pinimg.com/1200x/e5/b9/dd/e5b9dda79d8a514870467ef6f4a825ee.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb68f",
+    "nickname": "Storm",
+    "real_name": "Ororo Munroe",
+    "origin_description": "Ororo Munroe, also known as Storm, is the descendant of an ancient line of African priestesses, all of whom have white hair, blue eyes, and the potential to wield magic. Her mother, N'Dare, was an African princess who married American photojournalist David Munroe and moved with him to Manhattan.",
+    "superpowers": ["weather manipulation", "flight"],
+    "catch_phrase": "",
+    "images": [
+      "https://i.pinimg.com/736x/4c/0d/11/4c0d11af1a9389b824b46e5e5f112f00.jpg",
+      "https://w0.peakpx.com/wallpaper/391/495/HD-wallpaper-storm-marvel-marvel-comics-mutant-ororo-ororo-munroe-white-xmen.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb690",
+    "nickname": "Cyclops",
+    "real_name": "Scott Summers",
+    "origin_description": "Scott Summers is a mutant whose eyes constantly emit beams of concussive force. He wears a visor or glasses with ruby quartz lenses that allow him to control these beams and see without blasting everything in sight.",
+    "superpowers": ["optic blast", "spatial awareness"],
+    "catch_phrase": "",
+    "images": [
+      "https://49.media.tumblr.com/88237b6ccf31942db61f9f84edf086c0/tumblr_n8ikliMgi31twgs7qo1_500.gif",
+      "https://aiptcomics.com/wp-content/uploads/2019/01/RCO032.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb691",
+    "nickname": "Quicksilver",
+    "real_name": "Pietro Maximoff",
+    "origin_description": "Quicksilver is a mutant capable of moving and thinking at superhuman speeds. Originally capable of running at the speed of sound; exposure to the High Evolutionary's Isotope E made it possible for the character to run at supersonic speeds of up to Mach 10 and resist the effects of friction, reduced oxygen, and kinetic impact while moving at super-speeds.",
+    "superpowers": [
+      "superhuman speed",
+      "reflexes",
+      "stamina",
+      "durability",
+      "acceleration"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://i.insider.com/538186fe69bedd9a6d43afbd?width=694&format=jpeg",
+      "https://static.displate.com/857x1200/displate/2022-05-23/fca8f78bc4046e728d49aeec0308cf79_7ccefb0ca6dcfd5f2ffd9c5b7ccffea7.jpg"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb692",
+    "nickname": "Falcon-9",
+    "real_name": "Sam Wilson",
+    "origin_description": "Sam Wilson, known as the Falcon, was the first African-American superhero in mainstream comic books, and also the first black superhero not to have the word 'black' as part of his superhero name. The character is depicted as a member of the Avengers and former member of the S.H.I.E.L.D.'s Avengers Initiative.",
+    "superpowers": [
+      "flight",
+      "aerial combat expertise",
+      "telepathic communication with birds"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://cdn.vox-cdn.com/thumbor/n1ad23hZrumsQ8gdXQ3yAyPYn8U=/0x0:1400x787/1200x800/filters:focal(405x89:629x313)/cdn.vox-cdn.com/uploads/chorus_image/image/63686080/lag0835_v074.1004_wide_6038893c740ea664a676ebc5d8160b22c02ad616.0.jpg",
+      "https://images.unsplash.com/photo-1524398039352-5905418087d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-15T09:45:26.845Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb693",
+    "nickname": "Winter Soldier",
+    "real_name": "Bucky Barnes",
+    "origin_description": "James Buchanan 'Bucky' Barnes was created by Joe Simon and Jack Kirby as a sidekick character in Captain America Comics. He's an orphan, chosen by Captain America to be his sidekick. He reappeared, brainwashed as a covert assassin codenamed the Winter Soldier.",
+    "superpowers": [
+      "master hand-to-hand combatant",
+      "marksman",
+      "peak human physical conditioning"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://images.unsplash.com/photo-1676319601300-7119b84c66a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      "https://images.unsplash.com/photo-1422207134147-65fb81f59e38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.016Z",
+    "updatedAt": "2023-10-14T10:16:22.016Z"
+  },
+  {
+    "_id": "652a6a75f6d04c52d29fb685",
+    "nickname": "Superman",
+    "real_name": "Clark Kent",
+    "origin_description": "He was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction…",
+    "superpowers": [
+      "solar energy absorption and healing factor",
+      "solar flare and heat vision",
+      "solar invulnerability",
+      "flight"
+    ],
+    "catch_phrase": "Look, up in the sky, it's a bird, it's a plane, it's Superman!",
+    "images": [
+      "https://images.unsplash.com/photo-1538051046377-5ad74dc62f95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1613834926943-9e4ac2945744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1634861949375-3fc4bd412f2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.015Z",
+    "updatedAt": "2023-10-14T10:16:22.015Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb686",
+    "nickname": "Batman",
+    "real_name": "Bruce Wayne",
+    "origin_description": "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, he swore vengeance against criminals, an oath tempered by a sense of justice.",
+    "superpowers": [
+      "exceptional martial artist",
+      "combat strategy",
+      "inexhaustible wealth",
+      "brilliant deductive skills",
+      "advanced technology"
+    ],
+    "catch_phrase": "I'm Batman.",
+    "images": [
+      "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.015Z",
+    "updatedAt": "2023-10-14T10:16:22.015Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb687",
+    "nickname": "Wonder Woman",
+    "real_name": "Diana Prince",
+    "origin_description": "The princess of the Amazons, armed with superpowers of a god, Wonder Woman is one of Earth's most powerful defenders of peace, justice, and equality and a member of the Justice League.",
+    "superpowers": [
+      "superhuman strength",
+      "flight",
+      "durability",
+      "hand-to-hand combat ability"
+    ],
+    "catch_phrase": "",
+    "images": [
+      "https://images.unsplash.com/photo-1548351937-c9145e712de4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1529534562303-8f0c925536e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.015Z",
+    "updatedAt": "2023-10-14T10:16:22.015Z"
+  },
+  {
+    "_id": "652a6a76f6d04c52d29fb688",
+    "nickname": "Spiderman",
+    "real_name": "Peter Parker",
+    "origin_description": "Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses to help others, while his personal life continues to offer plenty of obstacles.",
+    "superpowers": [
+      "wall-crawling",
+      "enhanced strength",
+      "spider-sense",
+      "speed",
+      "stamina",
+      "durability",
+      "agility",
+      "healing factor"
+    ],
+    "catch_phrase": "With great power, comes great responsibility.",
+    "images": [
+      "https://images.unsplash.com/photo-1524481905007-ea072534b820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1613734086935-4cd1a02e9256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BpZGVybWFuJTIwbWVtZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+    ],
+    "__v": 0,
+    "createdAt": "2023-10-14T10:16:22.015Z",
+    "updatedAt": "2023-10-14T10:16:22.015Z"
+  }
+]
