@@ -54,6 +54,11 @@ coming soon...
 🔸 [Bootstrap](https://getbootstrap.com/)
 🔸 [SASS/SCSS](https://sass-lang.com/)
 
+## 🔷 Design
+
+Design made in [Figma](figma.com/)<br>
+Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/Untitled?type=design&node-id=0%3A1&mode=design&t=vG68AFPiZEOFanje-1) to design file of the project 
+
 ## How to Run the Project
 
 1. **Clone the repository:**
