@@ -19,7 +19,6 @@ const getHero = async (req, res) => {
 };
 
 const createHero = async (req, res) => {
-  console.log("hero");
   const {
     _id,
     nickname,
@@ -39,8 +38,6 @@ const createHero = async (req, res) => {
     images,
   };
 
-  console.log("_id");
-  console.log(_id);
   if (_id) {
     heroData._id = _id;
   }
@@ -54,7 +51,6 @@ const createHero = async (req, res) => {
 };
 
 const createHeroes = async (req, res) => {
-  console.log("heroes");
   const heroes = req.body;
 
   try {

@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "652cc5b4525baf3221ed43d2",
+    "nickname": "TEST1",
+    "real_name": "Rocket",
+    "origin_description": "Rocket Raccoon is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Bill Mantlo and artist Keith Giffen, the character first appeared in Marvel Preview #7 (Summer 1976). He is an intelligent, anthropomorphic raccoon, who is an expert marksman, weapon specialist and master tactician.",
+    "superpowers": ["master tactician", "marksman", "weapon specialist"],
+    "catch_phrase": "",
+    "images": [
+      "https://i.cbc.ca/1.4100013.1493928423!/fileImage/httpImage/rocket-raccoon-garbage.jpg",
+      "https://i.pinimg.com/originals/a0/a8/67/a0a867ab2b90c9d51b8fa52fff0cad5c.jpg"
+    ]
+  },
+  {
+    "_id": "652cc544525baf3221ed18d2",
+    "nickname": "TEST2",
+    "real_name": "Rocket",
+    "origin_description": "Rocket Raccoon is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Bill Mantlo and artist Keith Giffen, the character first appeared in Marvel Preview #7 (Summer 1976). He is an intelligent, anthropomorphic raccoon, who is an expert marksman, weapon specialist and master tactician.",
+    "superpowers": ["master tactician", "marksman", "weapon specialist"],
+    "catch_phrase": "",
+    "images": [
+      "https://i.cbc.ca/1.4100013.1493928423!/fileImage/httpImage/rocket-raccoon-garbage.jpg",
+      "https://i.pinimg.com/originals/a0/a8/67/a0a867ab2b90c9d51b8fa52fff0cad5c.jpg"
+    ]
+  }
+]
