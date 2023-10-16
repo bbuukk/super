@@ -3,7 +3,6 @@ import Head from "next/head";
 import Navbar from "@/comps/mutual/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-// import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { HeroContextProvider } from "../back/context/heroContext";
 import { useHeroContext } from "../back/hooks/useHeroContext";
@@ -14,11 +13,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   const excludedPaths = ["/404"];
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     import("bootstrap/dist/js/bootstrap.bundle.min");
-  //   }
-  // }, []);
   return (
     <>
       <Head>
