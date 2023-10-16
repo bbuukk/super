@@ -59,16 +59,6 @@ const Test = () => {
           ))}
         </div>
 
-        {/* {heroes &&
-          heroes.map((hero, index) => {
-            hero.clientId = hero.clientId || uuidv4();
-            return (
-              <div key={hero.clientId} className="col">
-                <HeroCard id={index} hero={hero} />
-              </div>
-            );
-          })} */}
-
         <div className="carousel-inner">
           {images.map((src, index) => (
             <CarouselItem key={index} src={src} isActive={index === 0} />
