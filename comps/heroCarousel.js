@@ -25,7 +25,7 @@ function HeroCarousel() {
   return (
     <>
       {heroes && (
-        <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
           {chunkArray(heroes, 5).map((heroesChunk, chunkIndex) => (
             <Carousel.Item key={chunkIndex}>
               <div className="row row-cols-md-5 g-3">

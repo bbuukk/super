@@ -7,8 +7,6 @@ const InputField = ({ id, value, setValue }) => {
         className="form-control fs-5"
         value={value}
         onChange={(e) => {
-          // console.log("field");
-          // console.log(e.target.value);
           setValue(e.target.value);
         }}
       />

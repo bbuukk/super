@@ -65,15 +65,11 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
   };
 
   const createHero = async (newHero) => {
-    console.log("creating new hero");
-    console.log(newHero);
     const response = await fetch(`http://localhost:4000/heroes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newHero),
     });
-
-    console.log(response);
 
     const data = await response.json();
     if (!response.ok) throw new Error("Network response was not ok");
