@@ -40,7 +40,7 @@ function HeroCarousel() {
                     hero.clientId = hero.clientId || uuidv4();
                     return (
                       <div key={hero.clientId} className={`${s.item} col`}>
-                        <HeroCard id={index} hero={hero} />
+                        <HeroCard id={chunkIndex * 5 + index} hero={hero} />
                       </div>
                     );
                   })}
