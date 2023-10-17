@@ -4,26 +4,29 @@
       display: flex;
       padding: 0 8rem;
       position: relative;
+      .carousel-control-prev-icon {
+        background-image: url("/general/prev_carousel_item_hand.svg"); // Set your own prev icon
+      }
+      .carousel-control-next-icon {
+        background-image: url("/general/next_carousel_item_hand.svg"); // Set your own prev icon
+      }
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
-        background-image: url("/general/favicon.ico"); // Set your own prev icon
+        width: 10rem;
+        height: 10rem;
       }
-
-      // padding: 0 2rem;
-
       .carousel-control-prev,
       .carousel-control-next {
         position: absolute;
-        top: 50%;
-        color: #ff0000;
+        margin: auto;
         width: fit-content;
         height: fit-content;
       }
       .carousel-control-prev {
-        left: 4rem;
+        left: 1rem;
       }
       .carousel-control-next {
-        right: 4rem;
+        right: 1rem;
       }
     }
   }
