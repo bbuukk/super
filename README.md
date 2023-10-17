@@ -14,7 +14,7 @@ Functionality of the project by pages: <br>
 
 - /
   - Listing all heroes by 5 in carousel
-  - Adding new hero functionality 
+  - Adding new hero  
 - /hero/:id
   - Listing details of superhero
   - Editing hero
