@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 import HeroesGallery from "@/comps/mutual/heroesGallery/heroesGallery";
-import EditHeroModal from "@/comps/mutual/editHeroModal/editHeroModal";
 import HeroDetails from "@/comps/heroId/heroDetails";
 import HeroImagesGallery from "@/comps/heroId/heroImagesGallery";
+import EditHeroModal from "@/comps/mutual/modals/editHeroModal";
+import DeleteHeroModal from "@/comps/mutual/modals/deleteHeroModal";
 
 const Hero = () => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const Hero = () => {
 
   const { heroes } = useHeroContext();
   const [editMode, setEditMode] = useState(false);
+  const [deleteMode, setDeleteMode] = useState(false);
   const heroIdNumber = Number(heroId);
 
   const deleteHero = () => {
@@ -46,7 +48,9 @@ const Hero = () => {
               editHero={() => {
                 setEditMode(!editMode);
               }}
-              deleteHero={deleteHero}
+              deleteHero={() => {
+                setDeleteMode(!deleteMode);
+              }}
             />
 
             <div className="mt-5">
@@ -69,6 +73,13 @@ const Hero = () => {
                 setEditMode(!editMode);
               }}
               hero={heroes[heroId]}
+            />
+            <DeleteHeroModal
+              isOpen={deleteMode}
+              toggle={() => {
+                setDeleteMode(!deleteMode);
+              }}
+              deleteHero={deleteHero}
             />
           </>
         )}

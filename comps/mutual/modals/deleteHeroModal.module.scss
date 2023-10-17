@@ -1,0 +1,17 @@
+@use "@/styles/variables" as *;
+
+.delete_hero_modal_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  .button_area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    .button {
+      width: 48%;
+    }
+  }
+}
