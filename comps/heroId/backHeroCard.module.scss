@@ -29,7 +29,7 @@
     margin-top: 1rem;
 
     p {
-      @include text(2rem);
+      @include text(2rem, white);
       margin: 0;
     }
   }

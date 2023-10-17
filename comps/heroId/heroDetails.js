@@ -19,6 +19,9 @@ const HeroDetails = ({ hero, id, editHero, deleteHero }) => {
                   onClick={() => deleteHero()}
                 >
                   <img src="/general/eraser.png"></img>
+                  <div className={`${s.text_container}`}>
+                    <span className={`${s.text}`}>Delete</span>{" "}
+                  </div>
                 </button>
                 <button
                   className={`${s.edit_hero_btn} btn`}
@@ -27,6 +30,9 @@ const HeroDetails = ({ hero, id, editHero, deleteHero }) => {
                   }}
                 >
                   <img src="/general/pencil.svg"></img>
+                  <div className={`${s.text_container}`}>
+                    <span className={`${s.text}`}>Edit</span>{" "}
+                  </div>
                 </button>
               </div>
             </div>

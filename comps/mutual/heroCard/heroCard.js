@@ -25,6 +25,7 @@ const HeroCard = ({ id, hero: { _id, nickname, images } }) => {
             src="/general/brand_logo.svg"
             alt="brand_logo"
           ></img>
+
           <div className={`${s.lines_bottom}`}>
             <div className={`${s.line}`}></div>
             <div className={`${s.line}`}></div>
@@ -39,7 +40,6 @@ const HeroCard = ({ id, hero: { _id, nickname, images } }) => {
             <div className={`${s.line}`}></div>
             <div className={`${s.line}`}></div>
           </div>
-
           <img
             src={images && images[0]}
             alt="hero image"

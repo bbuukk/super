@@ -1,31 +1,62 @@
 @use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
 
 .edit_area {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .btn_area {
     padding-top: 2rem;
     display: flex;
     gap: 3rem;
+
     .delete_hero_btn,
     .edit_hero_btn {
       width: fit-content;
       height: fit-content;
+      display: flex;
+      position: relative;
 
       transition: transform 0.2s ease-in-out;
+
       &:hover {
         transform: scale(1.1);
       }
+
       img {
         height: 15rem;
         object-fit: contain;
+        z-index: 3;
+      }
+
+      .text_container {
+        position: absolute;
+        top: 50%;
+
+        opacity: 0;
+
+        transform: rotate(90deg) translateY(80%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        .text {
+          text-transform: uppercase;
+          @include text(2rem, black);
+          z-index: 1;
+        }
       }
     }
 
-    .delete_hero_btn {
+    .delete_hero_btn:hover .text_container,
+    .edit_hero_btn:hover .text_container {
+      opacity: 1;
     }
-    .edit_hero_btn {
+
+    .edit_hero_btn:hover .text_container {
+      transform: rotate(90deg) translateY(-5%);
+    }
+    .delete_hero_btn:hover .text_container {
+      transform: rotate(90deg) translateY(-50%);
     }
   }
 }
