@@ -12,33 +12,17 @@
 
 Functionality of the project by pages: <br>
 
-coming soon...
-
-<!--
-- /pay
-  - Options for delivery and paying
-  - Reviewing following order
-- /products
-  - List of products with ability to filter them by price, brand, date etc.
-  - User can add a product to wish list or shopping cart
-- /products/[productId]/about
-  - Write a reveiw on the product
-  - Read detailed description and characteristics of the product
-- /profile
-  - Personal cabinet with profile info, product wish list and past orders list
 - /
-  - Product categories gallery
-  - Discount offers carousel
-  - Shop reviews carousel
-
-
+  - Listing all heroes by 5 in carousel
+  - Adding new hero functionality 
+- /hero/:id
+  - Listing details of superhero
+  - Editing hero
+  - Deleting hero
+  - Listing images of hero
+  - Gallery of all superhero cards available
 
 <br>
-
-- Other:
-  - Search on products by user input
-
-  -->
 
 ## 🔷 Tech Stack
 
@@ -61,32 +45,56 @@ Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/super?type=desi
 
 ## 🔷 How to Run the Project
 
-1. **Clone the repository:**
+1. **Clone the repository into super folder:**
    ```
-   git clone https://github.com/bbuukk/super.git
+   git clone https://github.com/bbuukk/super.git super
    ```
-2. **Navigate into the front-end directory:**
+2. **Navigate into the super directory:**
    ```
-   cd front
+   cd super
    ```
-3. **Install the required dependencies:**
+3. **Run vs code in super directory:**
    ```
-   npm install
+   code .
    ```
-4. **Run front-end part of the application:**
+4. **Open two terminals in vs code, one for front and one for back:**
+5. **In second terminal, one for back-end, navigate to back folder:**
    ```
-   npm run dev
+   cd back
    ```
-5. **Navigate into the back-end directory:**
+6. **In both terminals write down `npm i` in order to download dependencies:**
    ```
-   cd ../back
+   npm i 
    ```
-6. **Install the required dependencies:**
-   ```
-   npm install
-   ```
-7. **Run back-end part of the application:**
+7. **In both terminals write down `npm run dev` in order to run solution**
    ```
    npm run dev
+   
    ```
 8. **Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.**
+
+## 🔷 How to Test the Project
+1. **Clone the repository into super folder:**
+   ```
+   git clone https://github.com/bbuukk/super.git super
+   ```
+2. **Navigate into the super directory:**
+   ```
+   cd super
+   ```
+3. **Run vs code in super directory:**
+   ```
+   code .
+   ```
+4. **Navigate to back folder in terminal**
+   ```
+   cd back .
+   ```
+5. **Write down `npm i` in order to download dependencies **
+   ```
+  npm i
+   ``
+6. **Run tests **
+   ```
+  npm run test
+   ```
