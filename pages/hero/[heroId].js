@@ -2,34 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
 import EditHeroModal from "@/comps/editHeroModal";
-
-const HeroDetails = ({ hero, toggleEditMode, deleteHero }) => (
-  <div>
-    <div className="d-flex align-center ">
-      <h1>{hero.nickname}</h1>
-      <button className="btn " onClick={toggleEditMode}>
-        <i className="bi bi-pencil-square"></i>
-        Edit
-      </button>
-      <button className="btn " onClick={deleteHero}>
-        <i class="bi bi-trash-fill"></i> Delete
-      </button>
-    </div>
-    <p>Real Name: {hero.real_name}</p>
-    <p>Origin Description: {hero.origin_description}</p>
-    <ul>
-      {hero.superpowers &&
-        hero.superpowers.map((power, index) => <li key={index}>{power}</li>)}
-    </ul>
-    <p>Catch Phrase: {hero.catch_phrase}</p>
-    <div>
-      {hero.images &&
-        hero.images.map((image, index) => (
-          <img key={index} src={image} alt={`${hero.nickname} image`} />
-        ))}
-    </div>
-  </div>
-);
+import HeroDetails from "@/comps/heroDetails";
 
 const Hero = () => {
   const router = useRouter();
@@ -67,8 +40,11 @@ const Hero = () => {
           <>
             <HeroDetails
               hero={heroes[heroId]}
-              toggleEditMode={() => setEditMode(!editMode)}
-              deleteHero={() => deleteHero()}
+              id={heroId}
+              edit={() => {
+                setEditMode(!editMode);
+              }}
+              delete={deleteHero}
             />
             <EditHeroModal
               isOpen={editMode}
