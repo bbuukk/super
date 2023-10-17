@@ -1,10 +1,10 @@
-import HeroGallery from "@/comps/heroesGallery";
+import HeroCarousel from "@/comps/home/heroCarousel";
 
 export default function Home() {
   return (
     <>
       <main>
-        <HeroGallery />
+        <HeroCarousel />
       </main>
     </>
   );

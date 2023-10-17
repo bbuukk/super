@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useHeroContext } from "@/back/hooks/useHeroContext";
-import EditHeroModal from "@/comps/editHeroModal";
-import HeroDetails from "@/comps/heroDetails";
+import HeroesGallery from "@/comps/mutual/heroesGallery/heroesGallery";
+import EditHeroModal from "@/comps/mutual/editHeroModal/editHeroModal";
+import HeroDetails from "@/comps/heroId/heroDetails";
+import HeroImagesGallery from "@/comps/heroId/heroImagesGallery";
 
 const Hero = () => {
   const router = useRouter();
@@ -46,6 +48,8 @@ const Hero = () => {
               }}
               delete={deleteHero}
             />
+            <HeroImagesGallery hero={heroes[heroId]}></HeroImagesGallery>
+            <HeroesGallery></HeroesGallery>
             <EditHeroModal
               isOpen={editMode}
               toggle={() => {

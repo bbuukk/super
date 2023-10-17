@@ -1,4 +1,7 @@
-const HeroCardsGallery = () => {
+import { useHeroContext } from "@/back/hooks/useHeroContext";
+import HeroCard from "../heroCard/heroCard";
+const HeroesGallery = () => {
+  const { heroes } = useHeroContext();
   return (
     <>
       <div>
@@ -15,4 +18,4 @@ const HeroCardsGallery = () => {
   );
 };
 
-export default HeroCardsGallery;
+export default HeroesGallery;

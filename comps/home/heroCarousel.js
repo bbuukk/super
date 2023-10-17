@@ -1,9 +1,9 @@
 import { useHeroContext } from "@/back/hooks/useHeroContext";
-import HeroCard from "@/comps/heroCard";
 import { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { v4 as uuidv4 } from "uuid";
 import s from "./heroCarousel.module.scss";
+import HeroCard from "../mutual/heroCard/heroCard";
 
 function HeroCarousel() {
   const { heroes } = useHeroContext();

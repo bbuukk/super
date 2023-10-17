@@ -1,8 +1,5 @@
 import { useRouter } from "next/router";
 import s from "./heroCard.module.scss";
-import Disposable from "./mutual/auxiliary/disposable";
-import { useHeroContext } from "@/back/hooks/useHeroContext";
-import EditHeroModal from "./editHeroModal";
 
 const HeroCard = ({ id, hero: { _id, nickname, images } }) => {
   const router = useRouter();

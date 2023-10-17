@@ -1,0 +1,31 @@
+@use "@/styles/mixins" as *;
+
+.edit_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn_area {
+    padding-top: 2rem;
+    display: flex;
+    gap: 3rem;
+    .delete_hero_btn,
+    .edit_hero_btn {
+      width: fit-content;
+      height: fit-content;
+
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      img {
+        height: 15rem;
+        object-fit: contain;
+      }
+    }
+
+    .delete_hero_btn {
+    }
+    .edit_hero_btn {
+    }
+  }
+}

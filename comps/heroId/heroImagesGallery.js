@@ -1,6 +1,6 @@
 import s from "./heroImagesGallery.module.scss";
 
-const HeroImagesGallery = () => {
+const HeroImagesGallery = ({ hero }) => {
   return (
     <>
       <div>

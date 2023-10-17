@@ -1,7 +1,7 @@
 import { useHeroContext } from "@/back/hooks/useHeroContext";
-import BackHeroCard from "@/comps/backHeroCard";
-import HeroCard from "@/comps/heroCard";
 import s from "./heroDetails.module.scss";
+import HeroCard from "../mutual/heroCard/heroCard";
+import BackHeroCard from "./backHeroCard";
 
 const HeroDetails = ({ hero, id }) => {
   const { heroes } = useHeroContext();
@@ -10,9 +10,9 @@ const HeroDetails = ({ hero, id }) => {
       {heroes && (
         <div className="container">
           <div className=" d-flex justify-content-center gap-5">
-            <div>
+            <div className={`${s.edit_area}`}>
               <HeroCard id={id} hero={hero} />
-              <div className="d-flex">
+              <div className={`${s.btn_area}`}>
                 <button
                   className={`${s.delete_hero_btn} btn`}
                   onClick={() => {}}

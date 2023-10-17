@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Modal } from "react-bootstrap";
 import s from "./editHeroModal.module.scss";
-import InputField from "./mutual/auxiliary/inputField";
-import { useHeroContext } from "../back/hooks/useHeroContext";
-import Disposable from "./mutual/auxiliary/disposable";
+import InputField from "../auxiliary/inputField";
+import { useHeroContext } from "../../../back/hooks/useHeroContext";
+import Disposable from "../auxiliary/disposable";
 
 //! todo there is a bug, when you change state of nickname, but doesn't submit it, and then open modal again, the nickname will be the same as in the state, not as in the props
 
