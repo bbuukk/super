@@ -18,6 +18,7 @@ export default function Home() {
       <EditHeroModal
         isOpen={editMode}
         toggle={() => {
+          console.log("toggled");
           setEditMode(!editMode);
         }}
         hero={{}}

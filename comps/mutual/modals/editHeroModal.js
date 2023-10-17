@@ -169,7 +169,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
             </div>
 
             <div className={`${s.button_area}`}>
-              <button onClick={() => toggle()} className="btn">
+              <button type="button" onClick={() => toggle()} className="btn">
                 Cancel
               </button>
               <button type="submit" className="btn">
