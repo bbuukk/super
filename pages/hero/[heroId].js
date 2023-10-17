@@ -43,10 +43,10 @@ const Hero = () => {
             <HeroDetails
               hero={heroes[heroId]}
               id={heroId}
-              edit={() => {
+              editHero={() => {
                 setEditMode(!editMode);
               }}
-              delete={deleteHero}
+              deleteHero={deleteHero}
             />
             <HeroImagesGallery hero={heroes[heroId]}></HeroImagesGallery>
             <HeroesGallery></HeroesGallery>

@@ -3,7 +3,7 @@ import s from "./heroDetails.module.scss";
 import HeroCard from "../mutual/heroCard/heroCard";
 import BackHeroCard from "./backHeroCard";
 
-const HeroDetails = ({ hero, id }) => {
+const HeroDetails = ({ hero, id, editHero, deleteHero }) => {
   const { heroes } = useHeroContext();
   return (
     <>
@@ -15,11 +15,16 @@ const HeroDetails = ({ hero, id }) => {
               <div className={`${s.btn_area}`}>
                 <button
                   className={`${s.delete_hero_btn} btn`}
-                  onClick={() => {}}
+                  onClick={() => deleteHero()}
                 >
                   <img src="/general/eraser.png"></img>
                 </button>
-                <button className={`${s.edit_hero_btn} btn`} onClick={() => {}}>
+                <button
+                  className={`${s.edit_hero_btn} btn`}
+                  onClick={() => {
+                    editHero();
+                  }}
+                >
                   <img src="/general/pencil.svg"></img>
                 </button>
               </div>
