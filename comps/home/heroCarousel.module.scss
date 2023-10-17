@@ -1,8 +1,8 @@
 .hero_carousel {
   :global {
     .carousel {
-      display: flex;
-      padding: 0 8rem;
+      $padding: 7rem;
+      padding: 0 $padding + 1rem;
       position: relative;
       .carousel-control-prev-icon {
         background-image: url("/general/prev_carousel_item_hand.svg"); // Set your own prev icon
@@ -12,8 +12,8 @@
       }
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
-        width: 7rem;
-        height: 7rem;
+        width: $padding;
+        height: $padding;
       }
 
       .carousel-control-prev,
@@ -22,14 +22,18 @@
         margin: auto;
         width: fit-content;
         height: fit-content;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      .carousel-item {
       }
     }
   }
 
   .carousel_item {
-    padding-right: 0;
-    padding-left: 0;
-
     --bs-gutter-x: 0rem !important;
     margin: auto auto;
     padding: 3rem 0;
@@ -43,8 +47,6 @@
     .item {
       //todo fix this, so i don't need to use width here
       width: 18rem;
-      // height: 20rem;
-      // margin: 0 1px;
     }
   }
 }

@@ -30,7 +30,7 @@
     //todo make repsponsive
     width: 18rem;
     height: 22rem;
-    @include hero_card_container($radius, $padding);
+    @include hero_card_container($radius, $padding, 0.4em);
 
     transition: transform 0.3s;
 
@@ -119,12 +119,12 @@
   text-transform: uppercase;
 }
 
-@mixin hero_card_container($radius, $padding) {
+@mixin hero_card_container($radius, $padding, $border-size) {
   radius: $radius;
   padding: $padding;
   background-color: $color-old-paper;
   border-radius: 0.2rem;
-  border: 0.4em solid $color-black;
+  border: $border-size solid $color-black;
   cursor: pointer;
   overflow: hidden;
 }

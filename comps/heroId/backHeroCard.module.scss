@@ -5,7 +5,7 @@
   $radius: 0.2rem;
   $padding: 0rem;
 
-  @include hero_card_container($radius, $padding);
+  @include hero_card_container($radius, $padding, 0.4em);
 
   display: flex;
   flex-direction: column;
