@@ -10,9 +10,10 @@
   align-items: center;
   justify-content: center;
 
+  //todo make responsive
   position: absolute;
-  right: 10rem;
-  bottom: 10rem;
+  right: 5rem;
+  bottom: 5rem;
 
   transition: background-color 0.1s ease-in-out;
   &:hover {

@@ -15,7 +15,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const [originDescription, setOriginDescription] = useState("");
   const [superpowers, setSuperpowers] = useState("");
   const [catchPhrase, setCatchPhrase] = useState("");
-  const [images, setImages] = useState([""]);
+  const [images, setImages] = useState([]);
   const [newImage, setNewImage] = useState("");
 
   useEffect(() => {
@@ -60,8 +60,11 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
     });
 
     const data = await response.json();
-    if (!response.ok) throw new Error("Network response was not ok");
-    dispatch({ type: "UPDATE_HERO", payload: data });
+    if (!response.ok) {
+      console.log(data.error);
+    } else {
+      dispatch({ type: "UPDATE_HERO", payload: data });
+    }
   };
 
   const createHero = async (newHero) => {
@@ -72,8 +75,11 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
     });
 
     const data = await response.json();
-    if (!response.ok) throw new Error("Network response was not ok");
-    dispatch({ type: "CREATE_HERO", payload: data });
+    if (!response.ok) {
+      console.error(data.error); // Log the error message
+    } else {
+      dispatch({ type: "CREATE_HERO", payload: data });
+    }
   };
 
   const dispose = (key) => {
@@ -85,7 +91,12 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
     <>
       <Modal show={isOpen} onHide={toggle} centered size="xl">
         <Modal.Body>
-          <p>Edit Superhero</p>
+          {Object.keys(hero).length ? (
+            <p>Edit Superhero</p>
+          ) : (
+            <p>Create Superhero</p>
+          )}
+
           <hr />
           <form onSubmit={handleSumbit}>
             <div className={`${s.input_fields}`}>

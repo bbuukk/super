@@ -9,19 +9,19 @@ export default function Home() {
     <>
       <main>
         <HeroCarousel />
-        <AddNewHeroButton
-          toggle={() => {
-            setEditMode(!editMode);
-          }}
-        />
-        <EditHeroModal
-          isOpen={editMode}
-          toggle={() => {
-            setEditMode(!editMode);
-          }}
-          hero={{}}
-        />
       </main>
+      <AddNewHeroButton
+        toggle={() => {
+          setEditMode(!editMode);
+        }}
+      />
+      <EditHeroModal
+        isOpen={editMode}
+        toggle={() => {
+          setEditMode(!editMode);
+        }}
+        hero={{}}
+      />
     </>
   );
 }

@@ -42,11 +42,28 @@ const createHero = async (req, res) => {
     heroData._id = _id;
   }
 
+  // try {
+  //   const hero = await Hero.create(heroData);
+  //   res.status(200).json(hero);
+  // } catch (err) {
+  //   res.status(400).json({ error: err.message });
+  // }
+
   try {
     const hero = await Hero.create(heroData);
     res.status(200).json(hero);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
+  } catch (error) {
+    if (error instanceof mongoose.Error.ValidationError) {
+      res.status(400).json({ error: error.message });
+    } else if (error instanceof mongoose.Error) {
+      if (error.code === 11000 || error.code === 11001) {
+        res.status(400).json({ error: "Duplicate key violation" });
+      } else {
+        res.status(500).json({ error: "Internal server error" });
+      }
+    } else {
+      res.status(500).json({ error: "Internal server error" });
+    }
   }
 };
 
