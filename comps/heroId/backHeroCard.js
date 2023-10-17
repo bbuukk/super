@@ -1,12 +1,12 @@
 import s from "./backHeroCard.module.scss";
 
-const BackHeroCard = ({ hero, idx }) => {
+const BackHeroCard = ({ hero, id }) => {
   return (
     <>
       <div className={`${s.back_hero_card}`}>
         <div className={`${s.header}`}>
           <p className={`${s.nickname}`}>{hero.nickname}</p>
-          <p className={`${s.index}`}>{idx}</p>
+          <p className={`${s.index}`}>{`#${id}`}</p>
         </div>
         <div className={`${s.body}`}>
           <div className={`${s.real_name}`}>{hero.real_name}</div>

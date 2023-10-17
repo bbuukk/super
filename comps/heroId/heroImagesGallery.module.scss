@@ -2,7 +2,10 @@
 .image_container {
   $radius: 0.2rem;
   $padding: 0.5rem;
-  @include hero_card_container(18rem, 22rem, $radius, $padding);
+  //todo make it responsive
+  width: 18rem;
+  height: 22rem;
+  @include hero_card_container($radius, $padding);
   .image {
     @include image;
   }

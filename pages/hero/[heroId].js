@@ -48,8 +48,10 @@ const Hero = () => {
               }}
               deleteHero={deleteHero}
             />
-            <HeroImagesGallery hero={heroes[heroId]}></HeroImagesGallery>
-            <HeroesGallery></HeroesGallery>
+            <div className="container">
+              <HeroImagesGallery hero={heroes[heroId]}></HeroImagesGallery>
+              <HeroesGallery></HeroesGallery>
+            </div>
             <EditHeroModal
               isOpen={editMode}
               toggle={() => {

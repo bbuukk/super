@@ -12,6 +12,7 @@ const HeroDetails = ({ hero, id, editHero, deleteHero }) => {
           <div className=" d-flex justify-content-center gap-5">
             <div className={`${s.edit_area}`}>
               <HeroCard id={id} hero={hero} />
+
               <div className={`${s.btn_area}`}>
                 <button
                   className={`${s.delete_hero_btn} btn`}
