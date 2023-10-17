@@ -13,7 +13,7 @@ const BackHeroCard = ({ hero, id }) => {
           <div className={`${s.origin_description}`}>
             {hero.origin_description}
           </div>
-          <div className={`${s.superpowers}`}>{hero.superpowers}</div>
+          <div className={`${s.superpowers}`}>{hero.superpowers.join(",")}</div>
           <div className={`${s.catch_phrase}`}>{hero.catch_phrase}</div>
         </div>
       </div>

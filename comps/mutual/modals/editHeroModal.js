@@ -15,7 +15,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
   const [originDescription, setOriginDescription] = useState("");
   const [superpowers, setSuperpowers] = useState("");
   const [catchPhrase, setCatchPhrase] = useState("");
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState();
   const [newImage, setNewImage] = useState("");
 
   useEffect(() => {
@@ -117,9 +117,7 @@ const EditHeroModal = ({ isOpen, toggle, hero }) => {
               />
               <InputField
                 id="superpowers"
-                // value={superpowers.join(",")}
                 value={superpowers}
-                // setValue={(e) => setSuperpowers(e.target.value.split(","))}
                 setValue={setSuperpowers}
               />
               <InputField
