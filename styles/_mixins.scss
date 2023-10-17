@@ -1,25 +1,22 @@
 @use "@/styles/variables" as *;
 
-@mixin link($font-size, $color) {
-  font-size: $font-size;
-  color: $color;
-  text-decoration: none;
-
-  text-shadow: 0px 4px 4px rgba(233, 192, 192, 0.25);
+@mixin irish_text() {
   font-family: $font-family-irish-grover;
-  font-size: 40px;
 
   font-weight: 400;
   line-height: normal;
-  text-shadow: 0px 2px 2px $color;
+  text-shadow: 0px 2px 2px black;
+  text-transform: uppercase;
+}
 
+@mixin link() {
   background: linear-gradient(to right, $color-purple, $color-purple),
     linear-gradient(to right, $color-red, $color-spanish-pink);
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms, color 200ms;
-
+  text-decoration: none;
   &:hover {
     background-size: 0 2px, 100% 3px;
     color: $color-red;

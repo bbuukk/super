@@ -48,9 +48,20 @@ const Hero = () => {
               }}
               deleteHero={deleteHero}
             />
-            <div className="container">
-              <HeroImagesGallery hero={heroes[heroId]}></HeroImagesGallery>
-              <HeroesGallery></HeroesGallery>
+
+            <div className="mt-5">
+              <h2 className="ms-5 mb-4 text-irish fs-1">
+                All images of this hero
+              </h2>
+              <div className="container">
+                <HeroImagesGallery hero={heroes[heroId]}></HeroImagesGallery>
+              </div>
+            </div>
+            <div className=" mt-5">
+              <h2 className="ms-5 mb-4 text-irish fs-1">Other your cards</h2>
+              <div className="container">
+                <HeroesGallery></HeroesGallery>
+              </div>
             </div>
             <EditHeroModal
               isOpen={editMode}

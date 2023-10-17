@@ -1,8 +1,13 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 body {
   overflow-x: hidden;
   background-image: url("/general/background.svg");
+}
+
+.text-irish {
+  @include irish_text;
 }
 
 html,

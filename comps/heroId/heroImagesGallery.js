@@ -4,8 +4,7 @@ const HeroImagesGallery = ({ hero }) => {
   return (
     <>
       <div>
-        <h2>Cards of these hero</h2>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-3">
           {hero.images &&
             hero.images.map((imageUrl, index) => (
               <div key={index} className="col">
