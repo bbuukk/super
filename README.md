@@ -92,9 +92,9 @@ Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/super?type=desi
    ```
 5. **Write down `npm i` in order to download dependencies **
    ```
-  npm i
-   ``
+   npm i .
+   ```
 6. **Run tests **
    ```
-  npm run test
+   npm run test .
    ```
