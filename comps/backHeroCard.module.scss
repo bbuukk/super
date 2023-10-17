@@ -7,7 +7,6 @@
   $radius: 0.2rem;
   $padding: 0rem;
   @include hero_card_container(28rem, 32rem, $radius, $padding);
-  min-height: auto;
 
   .header {
     background-color: $color-red;

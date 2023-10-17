@@ -29,20 +29,24 @@
   }
 
   .carousel_item {
+    padding-right: 0;
+    padding-left: 0;
+
+    --bs-gutter-x: 0rem !important;
     margin: auto auto;
     padding: 3rem 0;
     width: fit-content;
-    float: none;
-
-    gap: 3rem;
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1rem;
 
     .item {
+      //todo fix this, so i don't need to use width here
       width: 18rem;
-      height: 22rem;
+      // height: 20rem;
+      // margin: 0 1px;
     }
   }
 }
