@@ -99,4 +99,4 @@ Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/super?type=desi
    npm run test
    ```
 ## 🔷 Assumptions
-none -
+Site is not fully responsive, so it is only for desktop 
