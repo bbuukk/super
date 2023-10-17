@@ -88,13 +88,13 @@ Here is [link](https://www.figma.com/file/hkwpcRnYVYN8OVXBaTk3vE/super?type=desi
    ```
 4. **Navigate to back folder in terminal**
    ```
-   cd back .
+   cd back 
    ```
 5. **Write down `npm i` in order to download dependencies **
    ```
-   npm i .
+   npm i 
    ```
 6. **Run tests **
    ```
-   npm run test .
+   npm run test
    ```
