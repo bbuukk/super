@@ -1,0 +1,30 @@
+@use "@/styles/variables" as *;
+
+.add_new_hero_btn {
+  background-color: $color-purple;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  right: 10rem;
+  bottom: 10rem;
+
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: $color-red;
+  }
+
+  &:active {
+    border: 0;
+  }
+
+  i {
+    color: white;
+    font-size: 4rem;
+  }
+}

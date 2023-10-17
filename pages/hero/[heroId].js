@@ -62,7 +62,7 @@ const Hero = () => {
               </div>
             </div>
             <div className=" mt-5">
-              <h2 className="ms-5 mb-4 text-irish fs-1">Other your cards</h2>
+              <h2 className="ms-5 mb-4 text-irish fs-1">All your cards</h2>
               <div className="container">
                 <HeroesGallery></HeroesGallery>
               </div>
